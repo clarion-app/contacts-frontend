@@ -26,8 +26,6 @@
     "typescript": "^5.5.4"
   },
   "customFields": {
-        "initializer": "initializeContactsFrontend",
-        "setToken": "setContactsFrontendToken",
         "api": ["contactsApi"],
         "routes": [
             {
