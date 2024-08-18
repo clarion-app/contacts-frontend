@@ -28,7 +28,8 @@
   "customFields": {
     "Clarion": {
       "api": [
-        "contactsApi"
+        "contactsApi",
+        "groupsApi"
       ],
       "routes": [
         {

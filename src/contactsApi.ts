@@ -35,18 +35,18 @@ export const contactsApi = createApi({
       providesTags: ['Contact'],
     }),
     createContact: builder.mutation<ContactType, Partial<ContactType>>({
-      query: (list) => ({
+      query: (contact) => ({
         url: '/contacts',
         method: 'POST',
-        body: list,
+        body: contact,
       }),
       invalidatesTags: ['Contact'],
     }),
-    updateContact: builder.mutation<ContactType, { id: string; list: Partial<ContactType> }>({
-      query: ({ id, list }) => ({
+    updateContact: builder.mutation<ContactType, { id: string; contact: Partial<ContactType> }>({
+      query: ({ id, contact }) => ({
         url: `/contacts/${id}`,
         method: 'PUT',
-        body: list,
+        body: contact,
       }),
       invalidatesTags: ['Contact'],
     }),
