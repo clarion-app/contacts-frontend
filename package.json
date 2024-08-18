@@ -1,0 +1,19 @@
+{
+  "name": "@clarion-app/contacts-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarion-app/contacts-frontend.git"
+  },
+  "author": "Tim Schwartz <tim@metaverse.systems>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clarion-app/contacts-frontend/issues"
+  },
+  "homepage": "https://github.com/clarion-app/contacts-frontend#readme"
+}
