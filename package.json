@@ -26,7 +26,7 @@
     "typescript": "^5.5.4"
   },
   "customFields": {
-    "Clarion": {
+    "clarion": {
       "api": [
         "contactsApi",
         "groupsApi"
