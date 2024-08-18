@@ -9,3 +9,5 @@ export const initializeFrontend = (setBackendUrl: string) => {
 export const setFrontendToken = (token: string) => {
     backend.token = token;
 };
+
+export { contactsApi } from "./contactsApi";
