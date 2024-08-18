@@ -26,21 +26,25 @@
     "typescript": "^5.5.4"
   },
   "customFields": {
-        "api": ["contactsApi"],
-        "routes": [
-            {
-                "path": "/clarion-app/contacts",
-                "element": "<Contacts />"
-            }
-        ],
-        "menu": {
-            "name": "Contacts",
-            "entries": [
-                {
-                    "name": "Contacts",
-                    "path": "/clarion-app/contacts"
-                }
-            ]
+    "Clarion": {
+      "api": [
+        "contactsApi"
+      ],
+      "routes": [
+        {
+          "path": "/clarion-app/contacts",
+          "element": "<Contacts />"
         }
+      ],
+      "menu": {
+        "name": "Contacts",
+        "entries": [
+          {
+            "name": "Contacts",
+            "path": "/clarion-app/contacts"
+          }
+        ]
+      }
     }
+  }
 }
