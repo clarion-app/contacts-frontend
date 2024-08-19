@@ -22,7 +22,7 @@ export interface ContactType {
 }
 
 export const contactsApi = createApi({
-  reducerPath: 'contactsApi',
+  reducerPath: 'clarion-app-contacts-contactsApi',
   baseQuery: baseQuery(),
   tagTypes: ['Contact'],
   endpoints: (builder) => ({

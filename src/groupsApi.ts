@@ -22,19 +22,19 @@ export interface GroupType {
 }
 
 export const groupsApi = createApi({
-  reducerPath: 'groupsApi',
+  reducerPath: 'clarion-app-contacts-groupsApi',
   baseQuery: baseQuery(),
   tagTypes: ['Group'],
   endpoints: (builder) => ({
-    getgroups: builder.query({
+    getGroups: builder.query({
       query: () => '/groups',
       providesTags: ['Group'],
     }),
-    getgroup: builder.query<GroupType, string>({
+    getGroup: builder.query<GroupType, string>({
       query: (id) => `/groups/${id}`,
       providesTags: ['Group'],
     }),
-    creategroup: builder.mutation<GroupType, Partial<GroupType>>({
+    createGroup: builder.mutation<GroupType, Partial<GroupType>>({
       query: (group) => ({
         url: '/groups',
         method: 'POST',
@@ -42,7 +42,7 @@ export const groupsApi = createApi({
       }),
       invalidatesTags: ['Group'],
     }),
-    updategroup: builder.mutation<GroupType, { id: string; group: Partial<GroupType> }>({
+    updateGroup: builder.mutation<GroupType, { id: string; group: Partial<GroupType> }>({
       query: ({ id, group }) => ({
         url: `/groups/${id}`,
         method: 'PUT',
@@ -50,7 +50,7 @@ export const groupsApi = createApi({
       }),
       invalidatesTags: ['Group'],
     }),
-    deletegroup: builder.mutation<void, string>({
+    deleteGroup: builder.mutation<void, string>({
       query: (id) => ({
         url: `/groups/${id}`,
         method: 'DELETE',
@@ -61,9 +61,9 @@ export const groupsApi = createApi({
 });
 
 export const {
-  useGetgroupsQuery,
-  useGetgroupQuery,
-  useCreategroupMutation,
-  useUpdategroupMutation,
-  useDeletegroupMutation,
+  useGetGroupsQuery,
+  useGetGroupQuery,
+  useCreateGroupMutation,
+  useUpdateGroupMutation,
+  useDeleteGroupMutation,
 } = groupsApi;
