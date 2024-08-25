@@ -12,4 +12,7 @@ export const setFrontendToken = (token: string) => {
 
 export { contactsApi } from "./contactsApi";
 export { groupsApi } from "./groupsApi";
+export { phoneApi } from "./phoneApi";
+export { emailApi } from "./emailApi";
 export { Contacts } from "./Contacts";
+export { Contact } from "./Contact";

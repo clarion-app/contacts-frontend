@@ -1,25 +1,6 @@
-import { createApi, fetchBaseQuery, BaseQueryFn, FetchArgs, FetchBaseQueryError } from '@reduxjs/toolkit/query/react';
-import { backend } from '.';
-
-const rawBaseQuery = (baseUrl: string) => fetchBaseQuery({ 
-  baseUrl: baseUrl,
-  prepareHeaders: (headers) => {
-      headers.set('Content-Type', 'application/json');
-      headers.set('Authorization', 'Bearer ' + backend.token);
-      return headers;
-  }
-});
-
-function baseQuery(): BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError> {
-    return async (args, api, extraOptions) => {
-        let result = await rawBaseQuery((await backend).url + '/api/clarion-app/contacts')(args, api, extraOptions);
-        return result;
-    };
-}
-
-export interface GroupType {
-
-}
+import { createApi } from '@reduxjs/toolkit/query/react';
+import baseQuery from './baseQuery';
+import { GroupType } from './types';
 
 export const groupsApi = createApi({
   reducerPath: 'clarion-app-contacts-groupsApi',

@@ -29,12 +29,18 @@
     "clarion": {
       "api": [
         "contactsApi",
-        "groupsApi"
+        "groupsApi",
+        "phoneApi",
+        "emailApi"
       ],
       "routes": [
         {
           "path": "/clarion-app/contacts",
           "element": "<Contacts />"
+        },
+        {
+          "path": "/clarion-app/contacts/contact/:id",
+          "element": "<Contact />"
         }
       ],
       "menu": {
