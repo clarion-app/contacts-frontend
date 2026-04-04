@@ -1,10 +1,11 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { PhoneType } from './types';
-import baseQuery from './baseQuery';
+import { createBaseQuery } from '@clarion-app/frontend-base';
+import { backend } from './config';
 
 export const phoneApi = createApi({
   reducerPath: 'phoneApi',
-  baseQuery: baseQuery(),
+  baseQuery: createBaseQuery({ routePrefix: '/api/clarion-app/contacts', backendConfig: backend }),
   tagTypes: ['Phone'],
   endpoints: (builder) => ({
     getPhones: builder.query<PhoneType[], string>({

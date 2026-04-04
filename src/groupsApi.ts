@@ -1,10 +1,11 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import baseQuery from './baseQuery';
+import { createBaseQuery } from '@clarion-app/frontend-base';
+import { backend } from './config';
 import { GroupType } from './types';
 
 export const groupsApi = createApi({
   reducerPath: 'clarion-app-contacts-groupsApi',
-  baseQuery: baseQuery(),
+  baseQuery: createBaseQuery({ routePrefix: '/api/clarion-app/contacts', backendConfig: backend }),
   tagTypes: ['Group'],
   endpoints: (builder) => ({
     getGroups: builder.query({
