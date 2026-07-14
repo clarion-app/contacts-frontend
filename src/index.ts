@@ -6,3 +6,4 @@ export { phoneApi } from "./phoneApi";
 export { emailApi } from "./emailApi";
 export { Contacts } from "./Contacts";
 export { Contact } from "./Contact";
+export * from "./types";
